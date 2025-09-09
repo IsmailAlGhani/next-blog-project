@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 BlogWizard
 
-## Getting Started
+A modern, multi-step blog creation platform built with Next.js App Router, React, TypeScript, and DaisyUI. Features a wizard-based post creation flow, real-time validation, auto-saving, and a clean reading experience.
 
-First, run the development server:
+## ✨ Features
+
+- 🧙‍♂️ **Multi-Step Wizard**: Create posts through an intuitive step-by-step process
+- ✍️ **Content Editor**: Rich text area with character count and validation
+- 🏷️ **Categories**: Organize posts with predefined categories
+- 📱 **Responsive Design**: Mobile-first approach with clean typography
+- 🎨 **Modern UI**: Clean, accessible interface using DaisyUI components
+
+## 🧰 Tech Stack
+
+- **Next.js 14 (App Router)**
+- **React 18** and **TypeScript 5**
+- **Zustand** for state management
+- **Tailwind CSS** + **DaisyUI** for styling
+- **Zod** for form validation
+- **React Hook Form** for form handling
+- **date-fns** for date formatting
+
+## 📦 Project Scripts
+
+| Script       | Description                  |
+| ------------ | ---------------------------- |
+| `pnpm dev`   | Start development server     |
+| `pnpm build` | Build project for production |
+| `pnpm start` | Start production server      |
+| `pnpm lint`  | Run ESLint                   |
+
+## 🚀 Getting Started
+
+1. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Run the dev server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Open the app:
 
-## Learn More
+```txt
+http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Live Preview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Check out the live demo of the application here: [BlogWizard](https://next-blog-project-nine.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧭 How to Use
 
-## Deploy on Vercel
+- Start at the homepage to see all blog posts
+- Click "Create Post" to start the wizard:
+  1. Enter title and author (Metadata)
+  2. Add summary and select category (Summary)
+  3. Write your content (Content)
+  4. Review and publish (Review)
+- Posts are saved automatically as you type
+- View posts with full formatting and metadata
+- Navigate using the breadcrumb trail
+- Responsive layout works on all devices
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗂️ Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```txt
+src/
+  app/                 # Next.js App Router pages
+  components/          # UI components
+    blog/             # Blog-specific components
+    layout/           # Layout components
+    ui/              # Shared UI components
+    wizard/          # Multi-step wizard components
+  hooks/              # Custom hooks
+  lib/                # Utilities and types
+    store/           # Zustand store
+    validation/      # Zod schemas
+  utils/              # Helper functions
+```
+
+Key files:
+
+- `components/wizard/blog-wizard.tsx`: Main wizard component
+- `components/blog/blog-post-detail.tsx`: Blog post view
+- `components/blog/blog-list.tsx`: Post listing
+- `lib/store/blog-store.ts`: Zustand store for posts
+- `lib/validation/blog-schemas.ts`: Zod validation schemas
+- `lib/types.ts`: Shared TypeScript types
+
+---
+
+Made with 💙 using Next.js and DaisyUI.
