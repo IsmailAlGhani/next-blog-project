@@ -49,8 +49,8 @@ export function BlogPostDetail({
           <div className="text-6xl mb-4">📄</div>
           <h1 className="text-2xl font-bold mb-4">Blog Post Not Found</h1>
           <p className="text-base-content/70 mb-6">
-            The blog post you're looking for doesn't exist or may have been
-            removed.
+            The blog post you&apos;re looking for doesn&apos;t exist or may have
+            been removed.
           </p>
           <div className="flex gap-2 justify-center">
             <Link href="/" className="btn btn-primary">
@@ -176,7 +176,7 @@ export function BlogPostDetail({
         <div className="mt-8 text-center">
           <div className="card bg-base-200">
             <div className="card-body">
-              <h3 className="card-title justify-center">What's Next?</h3>
+              <h3 className="card-title justify-center">What&apos;s Next?</h3>
               <p className="text-base-content/70">
                 Continue exploring or create another blog post
               </p>
